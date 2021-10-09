@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script type="text/javascript" src="js/jquery-1.2.4.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<!--输入.top_menu,回车可快捷创建-->
+<!--顶部菜单显示条-->
+<div class="top_menu">
+    <div class="title">自动化测试平台</div>
+    <div class="menu_list" >
+        <ul>
+            <a href=""><li>首页</li></a>
+            <a href=""><li>接口列表</li></a>
+            <a href=""><li>用例列表</li></a>
+            <a href=""><li>套件列表</li></a>
+            <a href=""><li>测试报告</li></a>
+        </ul>
+    </div>
+    <div class="top_user">
+        <a href="" >注销用户</a>
+    </div>
+
+
+</div>
+
+<!--侧边菜单-->
+<div class="left_menu">
+    <div class="left_menu_title">项目管理</div>
+    <div class="left_menu_list">
+        <ul>
+            <li>
+                <h3>接口管理</h3>
+                <ul class="hide">
+                    <li><a href="">添加接口</a></li>
+                    <li><a href="">接口列表</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>接口管理</h3>
+                <ul class="hide">
+                    <li><a href="">添加接口</a></li>
+                    <li><a href="">接口列表</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--内容部分-->
+<div class="content">
+    <div class="pro_info">
+        <div class="pro_title">项 目 A</div>
+
+        <p>用例数量:5</p>
+        <p>接口数量:44</p>
+
+        <div class="del_pro"><a href="">删除</a></div>
+    </div>
+    <div class="pro_info">
+        <div class="pro_title">项 目 A</div>
+
+        <p>用例数量:5</p>
+        <p>接口数量:44</p>
+
+        <div class="del_pro"><a href="">删除</a></div>
+    </div>
+    <div class="pro_info">
+        <div class="pro_title">项 目 A</div>
+
+        <p>用例数量:5</p>
+        <p>接口数量:44</p>
+
+        <div class="del_pro"><a href="">删除</a></div>
+    </div>
+    <div class="pro_info">
+        <div class="pro_title">项 目 A</div>
+
+        <p>用例数量:5</p>
+        <p>接口数量:44</p>
+
+        <div class="del_pro"><a href="">删除</a></div>
+    </div>
+    <div class="pro_info">
+        <div class="pro_title">项 目 A</div>
+
+        <p>用例数量:5</p>
+        <p>接口数量:44</p>
+
+        <div class="del_pro"><a href="">删除</a></div>
+    </div>
+    <div class="pro_info">
+        <div class="pro_title">项 目 A</div>
+
+        <p>用例数量:5</p>
+        <p>接口数量:44</p>
+
+        <div class="del_pro"><a href="">删除</a></div>
+    </div>
+    <div class="pro_info" id="add">
+        <img src="image/icon02.png" alt="">
+    </div>
+</div>
+
+<!--新增项目弹框-->
+<!--back蒙层，出现弹框不可操作页面其元素-->
+<div class="back hide">
+    <div class="add_pro" >
+    <div class="add_title">新增项目</div>
+    <div class="alter_quit" id="remove">
+        <img src="image/icon03.png" height="20" width="20">
+    </div>
+    <form action="">
+        <div class="alter_input">
+            <label for="pro_title">项 目 名 称：</label>
+            <input type="text" name="title" id="pro_title">
+        </div>
+        <div class="alter_input">
+            <label for="pro_address">项 目 地 址：</label>
+            <input type="text" name="address" id="pro_address">
+        </div>
+        <div class="alter_input">
+            <label for="pro_tester">测 试 人 员：</label>
+            <input type="text" name="tester" id="pro_tester">
+        </div>
+        <div class="alter_input">
+            <label for="pro_message">测 试 描 述：</label>
+            <textarea name="" id="pro_message" cols="25" rows="5"></textarea>
+        </div>
+        <div class="pro_tj">
+            <input class="tj" type="button" value="提交">
+        </div>
+    </form>
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>
