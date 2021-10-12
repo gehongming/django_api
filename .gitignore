@@ -16,7 +16,6 @@ __pycache__/
 .Python
 env/
 build/
-dist/
 *.log
 
 # pyenv
