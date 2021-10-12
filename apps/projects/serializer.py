@@ -34,6 +34,8 @@ class ProjectModelSerializer(serializers.ModelSerializer):
     ])
 
 
+
+
     class Meta:
         model = Projects
         exclude = ("update_time","is_delete")

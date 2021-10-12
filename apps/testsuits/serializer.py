@@ -10,9 +10,6 @@ from rest_framework import serializers
 
 
 # 继承Serializer类或者 于类
-from rest_framework.validators import UniqueValidator
-
-from projects.serializer import ProjectModelSerializer
 from interfaces.models import Interfaces
 from projects.models import Projects
 from testsuits.models import Testsuits
@@ -24,14 +21,20 @@ class TestsuitsModelSerializer(serializers.ModelSerializer):
     project = serializers.StringRelatedField(label='所属项目名称', help_text='所属项目名称')
     project_id = serializers.PrimaryKeyRelatedField(label='所属项目id', help_text='所属项目id',
                                                     queryset=Projects.objects.filter(is_delete=0))
+
     class Meta:
         # 指定参考哪一个模型类
         model = Testsuits
-        exclude = ('update_time','is_delete')
+        exclude = ('is_delete',)
 
         extra_kwargs = {
             'create_time': {
-                'read_only': True
+                'read_only': True,
+                 'format': "%Y-%m-%d %H:%M:%S"
+            },
+            'update_time': {
+                'read_only': True,
+                'format': "%Y-%m-%d %H:%M:%S"
             }
         }
 

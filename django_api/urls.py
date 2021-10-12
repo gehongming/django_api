@@ -20,14 +20,15 @@ from django.urls import path, re_path
 from django.urls import include
 # from demo1.views import index
 from django.views import static
+from django.views.generic import TemplateView
 from rest_framework.documentation import include_docs_urls
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-
+from django.views.static import serve
 
 schema_view = get_schema_view(
     openapi.Info(
-        title='妞妞 接口文档',  #必传，
+        title='接口文档',  #必传，
         default_version='v1' , #必传
         description='这是优秀的接口文档',
         terms_of_service='http:api.niuniu.com',
@@ -40,7 +41,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     # 站点管理
     path('admin/', admin.site.urls),
-
+    # docs 接口文档
     path('docs/', include_docs_urls(title='测试平台接口文档')),
 
     # swagger
@@ -61,7 +62,5 @@ urlpatterns = [
     path('', include('reports.urls')),
     path('api/', include('rest_framework.urls')),
     path('user/', include('user.urls')),
-    url(r'^static/(?P<path>.*)$',static.serve,
-        {'document_root':settings.STATIC_ROOT},name='static')
+    # 静态文件,前后端代码合并使用.
 ]
-

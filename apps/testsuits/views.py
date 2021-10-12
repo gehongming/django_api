@@ -60,12 +60,6 @@ class TestsuitsViewSet(viewsets.ModelViewSet):
         instance.is_delete = 1
         instance.save()
 
-    def list(self, request, *args, **kwargs):
-        response = super().list(request, *args, **kwargs)
-        response.data['results'] = modify_output(response.data['results'])
-
-        return response
-
     def retrieve(self, request, *args, **kwargs):
         """
         获取用例详情

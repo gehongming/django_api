@@ -24,13 +24,11 @@ REPORTS_DIR = os.path.join(BASE_DIR, 'report')
 # 测试yaml文件 所在目录
 SUITES_DIR = os.path.join(BASE_DIR, 'suite')
 PROJECT_DIR = os.path.join(BASE_DIR, 'projects_dir')
-# 指定用于收集静态文件服务的路径
-STATIC_ROOT = os.path.join(BASE_DIR, 'front_ends/static')
 
+# 指定用于收集静态文件服务的路径.打包专用
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, '/front_ends/static/')
-]
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -38,10 +36,9 @@ STATICFILES_DIRS = [
 SECRET_KEY = 'django-insecure-@grn2g$9o0@yw3)l#&&el6*s&a*oo(g*nqb@&n(qnv%+32+xox'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -68,7 +65,7 @@ INSTALLED_APPS = [
     'envs.apps.EnvsConfig',
     'debugtalks.apps.DebugtalksConfig',
     'summary.apps.SummaryConfig',
-    'index.apps.IndexConfig'
+    # 'index.apps.IndexConfig'
 ]
 
 MIDDLEWARE = [

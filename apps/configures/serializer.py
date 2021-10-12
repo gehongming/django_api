@@ -42,7 +42,7 @@ class InterfacesAnothrSerializer(serializers.ModelSerializer):
         :param attrs:
         :return:
         """
-        if not Interfaces.objects.filter(id=attrs['iid'], project_id = attrs['pid'], is_delete=0).exits():
+        if not Interfaces.objects.filter(id=attrs['iid'], project_id = attrs['pid'], is_delete=0).exists():
             raise serializers.ValidationError('项目和该接口不匹配')
         return attrs
 

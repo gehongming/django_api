@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     'reports.apps.ReportsConfig',
     'envs.apps.EnvsConfig',
     'debugtalks.apps.DebugtalksConfig',
-    'summary.apps.SummaryConfig'
+    'summary.apps.SummaryConfig',
 ]
 
 MIDDLEWARE = [
